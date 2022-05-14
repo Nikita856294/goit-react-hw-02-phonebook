@@ -45,6 +45,7 @@ class App extends Component {
     this.setState({ filter: e.currentTarget.value });
   };
   render() {
+    console.log(this.state.contacts);
     const nozmalizedContacts = this.state.filter.toLowerCase();
     const filteredContacts = this.state.contacts.filter(contact =>
       contact.name.toLowerCase().includes(nozmalizedContacts),
